@@ -1,0 +1,28 @@
+server:
+  port: 9025
+
+logging:
+  level:
+    root: ${APP_LOG_LEVEL:INFO}
+    com.example: ${APP_LOG_LEVEL:DEBUG}
+
+spring:
+  threads:
+    virtual-enabled: true
+  jmx:
+    enabled: false
+  autoconfigure:
+    exclude[0]: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+    exclude[1]: org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+    exclude[2]: org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${APP_EMAIL_ADDRESS:your@gmail.com}
+    password: ${APP_EMAIL_PASSWORD:abcd-1234}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true

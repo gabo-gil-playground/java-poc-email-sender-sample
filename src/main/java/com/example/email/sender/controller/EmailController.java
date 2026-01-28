@@ -52,7 +52,7 @@ public class EmailController {
             return new ResponseEntity<>("", HttpStatus.OK);
         } catch (RuntimeException runtimeException) {
             log.error("sendEmail - error stack: {}", runtimeException.toString());
-            log.error("sendEmail - input report content: {}", email);
+            log.error("sendEmail - input email attributes: {}", email);
             return new ResponseEntity<>(Constants.EMAIL_SEND_API_BAD_REQUEST_ERROR, HttpStatus.BAD_REQUEST);
         }
     }

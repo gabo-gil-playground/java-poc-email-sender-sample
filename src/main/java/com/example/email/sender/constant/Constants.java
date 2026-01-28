@@ -5,7 +5,7 @@ package com.example.email.sender.constant;
  */
 public interface Constants {
     String APP_HEALTH_MESSAGE_KEY = "status";
-    String APP_REPORT_HEALTH_MESSAGE_VALUE = "server is running";
+    String APP_HEALTH_MESSAGE_VALUE = "server is running";
 
     String EMAIL_SEND_API_PATH = "/api/v1/email";
     String EMAIL_SEND_API_BAD_REQUEST_ERROR = "send email - bad request";

@@ -25,7 +25,7 @@ public class HealthController {
     @GetMapping(value = "/health", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> healthCheck() {
         HashMap<String, String> healthMessage = new HashMap<>();
-        healthMessage.put(Constants.APP_HEALTH_MESSAGE_KEY, Constants.APP_REPORT_HEALTH_MESSAGE_VALUE);
+        healthMessage.put(Constants.APP_HEALTH_MESSAGE_KEY, Constants.APP_HEALTH_MESSAGE_VALUE);
 
         return new ResponseEntity<>(healthMessage, HttpStatus.OK);
     }

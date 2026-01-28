@@ -19,15 +19,15 @@ public class EmailService {
      */
     public void sendEmail(final Email email) {
         log.info("sendEmail - start");
-        log.debug("sendEmail - report content: {}", email);
+        log.debug("sendEmail - email attributes: {}", email);
 
-        // start create pdf report elapsed time tracking
+        // startelapsed time tracking
         StopWatch sendEmailElapsedTime = new StopWatch();
         sendEmailElapsedTime.start();
 
         // TO BE IMPLEMENTED
 
-        // stop create pdf report elapsed time tracking
+        // stop elapsed time tracking
         sendEmailElapsedTime.stop();
 
         log.info("sendEmail - elapsed time: {} ms", sendEmailElapsedTime.getTotalTimeMillis());
